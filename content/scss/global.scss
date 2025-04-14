@@ -7,10 +7,6 @@
 Bootstrap tweaks
 ===============================================================*/
 
-html, body {
-  overflow: hidden;
-}
-
 body {
   margin: 0;
   position: absolute;
@@ -188,10 +184,6 @@ ui bootstrap tweaks
   white-space: nowrap;
 }
 
-.dropdown-menu {
-  padding-left: 0px;
-}
-
 /* ==========================================================================
 angular-cli removes postcss-rtl processed inline css, processed rules must be added here instead
 ========================================================================== */
@@ -232,4 +224,60 @@ angular-cli removes postcss-rtl processed inline css, processed rules must be ad
 .container {
   z-index: 99 !important;
   position: relative;
+}
+
+.button-group {
+  margin: -10px
+}
+
+.button-group a, .button-group button {
+  margin: 10px
+}
+
+a.btn-default, button.btn-default, div.btn-default {
+  padding: 0 28px;
+  border-style: solid;
+  border-width: 2px;
+  border-color: transparent;
+  border-radius: 8px;
+  background-color: transparent;
+  background: linear-gradient(95deg, var(--color-primary) 15%, var(--color-tertiary) 45%, var(--color-pink) 75%, var(--color-secondary) 100%) 95%/200% 100%;
+  transition-duration: .3s;
+  color: var(--color-white);
+  font-size: 16px;
+  font-weight: 400;
+  text-align: center;
+  text-decoration: none;
+  text-shadow: var(--shadow-light);
+  display: inline-block;
+  height: 50px;
+  line-height: 47px;
+  letter-spacing: .5px;
+  width: auto;
+  transition: .4s
+}
+
+a.btn-default:hover, button.btn-default:hover, div.btn-default:hover {
+  box-shadow: var(--shadow-primary);
+  -webkit-filter: brightness(125%);
+  filter: brightness(125%);
+  color: var(--color-white);
+  text-decoration: none
+}
+
+a.btn-default.btn-large, button.btn-default.btn-large, div.btn-default.btn-large {
+  height: 60px;
+  line-height: 56px;
+  padding: 0 37px;
+  font-size: 17px
+}
+
+@media only screen and (max-width: 767px) {
+  a.btn-default.btn-large, button.btn-default.btn-large, div.btn-default.btn-large {
+    padding: 0 25px
+  }
+}
+
+a.btn-default.round, button.btn-default.round, div.btn-default.round {
+  border-radius: 100px
 }
