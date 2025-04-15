@@ -25,7 +25,7 @@ function animate() {
     let gl = canvas.getContext('webgl2', params);
     const isWebGL2 = !!gl;
     if (!isWebGL2)
-      gl = canvas.getContext('webgl', params) || canvas.getContext('experimental-webgl', params);
+      {gl = canvas.getContext('webgl', params) || canvas.getContext('experimental-webgl', params);}
 
     let halfFloat;
     let supportLinearFiltering;
@@ -104,7 +104,7 @@ function animate() {
 
     const status = gl.checkFramebufferStatus(gl.FRAMEBUFFER);
     if (status != gl.FRAMEBUFFER_COMPLETE)
-      return false;
+      {return false;}
     return true;
   }
 
@@ -131,7 +131,7 @@ function animate() {
       gl.linkProgram(this.program);
 
       if (!gl.getProgramParameter(this.program, gl.LINK_STATUS))
-        throw gl.getProgramInfoLog(this.program);
+        {throw gl.getProgramInfoLog(this.program);}
 
       const uniformCount = gl.getProgramParameter(this.program, gl.ACTIVE_UNIFORMS);
       for (let i = 0; i < uniformCount; i++) {
@@ -152,7 +152,7 @@ function animate() {
     gl.compileShader(shader);
 
     if (!gl.getShaderParameter(shader, gl.COMPILE_STATUS))
-      throw gl.getShaderInfoLog(shader);
+      {throw gl.getShaderInfoLog(shader);}
 
     return shader;
   };
@@ -505,7 +505,7 @@ function animate() {
     gl.viewport(0, 0, textureWidth, textureHeight);
 
     if (splatStack.length > 0)
-      multipleSplats(splatStack.pop());
+      {multipleSplats(splatStack.pop());}
 
     advectionProgram.bind();
     gl.uniform2f(advectionProgram.uniforms.texelSize, 1.0 / textureWidth, 1.0 / textureHeight);
@@ -524,12 +524,18 @@ function animate() {
 
     for (let i = 0; i < pointers.length; i++) {
       const pointer = pointers[i];
-      if (pointer.moved) {
-        splat(pointer.x, pointer.y, pointer.dx, pointer.dy, pointer.color);
-        pointer.moved = false;
+      if (pointer.down) {
+        if (pointer.moved) {
+          splat(pointer.x, pointer.y, pointer.dx, pointer.dy, pointer.color);
+          pointer.moved = false;
+        }
+        else {
+          if (typeof pointer.x === 'number' && typeof pointer.y === 'number') {
+            splat(pointer.x, pointer.y, 0, 0, pointer.color);
+          }
+        }
       }
     }
-
     curlProgram.bind();
     gl.uniform2f(curlProgram.uniforms.texelSize, 1.0 / textureWidth, 1.0 / textureHeight);
     gl.uniform1i(curlProgram.uniforms.uVelocity, velocity.read[2]);
@@ -631,15 +637,24 @@ function animate() {
   canvas.addEventListener('touchmove', e => {
     e.preventDefault();
     const touches = e.targetTouches;
+    const rect = canvas.getBoundingClientRect();
+
     for (let i = 0; i < touches.length; i++) {
       let pointer = pointers[i];
+      if (!pointer) {continue;}
+
+      const touchX = touches[i].pageX - rect.left - window.scrollX;
+      const touchY = touches[i].pageY - rect.top - window.scrollY;
+      // ---------------------------------
+
       pointer.moved = pointer.down;
-      pointer.dx = (touches[i].pageX - pointer.x) * 10.0;
-      pointer.dy = (touches[i].pageY - pointer.y) * 10.0;
-      pointer.x = touches[i].pageX;
-      pointer.y = touches[i].pageY;
+      pointer.dx = (touchX - pointer.x) * 10.0;
+      pointer.dy = (touchY - pointer.y) * 10.0;
+      pointer.x = touchX;
+      pointer.y = touchY;
     }
   }, false);
+
 
   // mousedown
   canvas.addEventListener('mouseover', () => {
@@ -650,17 +665,24 @@ function animate() {
   canvas.addEventListener('touchstart', e => {
     e.preventDefault();
     const touches = e.targetTouches;
-    for (let i = 0; i < touches.length; i++) {
-      if (i >= pointers.length)
-        pointers.push(new pointerPrototype());
+    const rect = canvas.getBoundingClientRect();
 
+    for (let i = 0; i < touches.length; i++) {
+      while (i >= pointers.length) {
+        pointers.push(new pointerPrototype());
+      }
       pointers[i].id = touches[i].identifier;
       pointers[i].down = true;
-      pointers[i].x = touches[i].pageX;
-      pointers[i].y = touches[i].pageY;
+
+      const touchX = touches[i].pageX - rect.left - window.scrollX;
+      const touchY = touches[i].pageY - rect.top - window.scrollY;
+      pointers[i].x = touchX;
+      pointers[i].y = touchY;
+
       pointers[i].color = [Math.random() + 0.2, Math.random() + 0.2, Math.random() + 0.2];
     }
   });
+
 
   // mouseup
   window.addEventListener('mouseout', () => {
@@ -670,8 +692,8 @@ function animate() {
   window.addEventListener('touchend', e => {
     const touches = e.changedTouches;
     for (let i = 0; i < touches.length; i++)
-      for (let j = 0; j < pointers.length; j++)
-        if (touches[i].identifier == pointers[j].id)
-          pointers[j].down = false;
+      {for (let j = 0; j < pointers.length; j++)
+        {if (touches[i].identifier == pointers[j].id)
+          {pointers[j].down = false;}}}
   });
 }
