@@ -1,6 +1,6 @@
 {
   "configVersion": 1,
-  "timestamp": 1744760422894,
+  "timestamp": 1744761314174,
   "index": "/index.html",
   "assetGroups": [
     {
@@ -11,13 +11,13 @@
         "ignoreVary": true
       },
       "urls": [
-        "/16.632ac6b7e34c3510.js",
+        "/16.7c96669f4b3fd2a0.js",
         "/favicon.ico",
         "/index.html",
         "/main.5f045cc228cb4ea1.js",
         "/manifest.webapp",
         "/polyfills.5e6b3ada1c6f4661.js",
-        "/runtime.3273b43c2e9c8a6c.js",
+        "/runtime.1aeb71d6826436e9.js",
         "/scripts.dbc35eb495569867.js",
         "/styles.926017f11c9e39e8.css"
       ],
@@ -60,7 +60,9 @@
         "/dev.60d1e66135e49bdc.jpg",
         "/fond.f73624c3a206d1f4.png",
         "/green_shine.1b2f4c96db67b6c4.png",
+        "/linkedin.5ddda4d1e028dc0c.svg",
         "/logo-alb_white.1f3b3fca84102e90.png",
+        "/malt.7b1be21b63f7c7d8.svg",
         "/orange_shine.0c2de4d61ff02394.png"
       ],
       "patterns": []
@@ -68,7 +70,7 @@
   ],
   "dataGroups": [],
   "hashTable": {
-    "/16.632ac6b7e34c3510.js": "c5b906e14a930ab6122d96a8da1e4ab300099b57",
+    "/16.7c96669f4b3fd2a0.js": "ed932f0ad0c67c7f1d7c5e77e5cb6839be1b690c",
     "/adrien.63db796a46942298.png": "6f005171054e53396a26cb3144e558c94067ee74",
     "/branding.ae97e31b0158b895.jpg": "aa863ccb700bccf2bfb279d0e49c9a1560894bbd",
     "/conception.660a9c86ea19e7e6.jpg": "7504f7d0c59bd5a9c98bcb4e5c829ebeff5f4204",
@@ -99,13 +101,15 @@
     "/favicon.ico": "b6d04838303bd137171a49b3220637b79f535b15",
     "/fond.f73624c3a206d1f4.png": "3c254675e28f1f5382fbbaa7167422329d725de5",
     "/green_shine.1b2f4c96db67b6c4.png": "d4400256c8605143c913c1b5cad3449250c70cfa",
-    "/index.html": "c2d7a45a97e5903ae205679c5c93bc7b8460f43b",
+    "/index.html": "96eef152a642cac81ad56dba1c9ae4f8a7842011",
+    "/linkedin.5ddda4d1e028dc0c.svg": "ccb64a2a0a3984f48098dac695a6f88b1ec3cb05",
     "/logo-alb_white.1f3b3fca84102e90.png": "b4083faad1f4025cc57d85959ab9d4b603f54d6a",
     "/main.5f045cc228cb4ea1.js": "908ab46bef2e98022d8c84738c48604ff4e88679",
+    "/malt.7b1be21b63f7c7d8.svg": "cf88100739d8e945358ca0e71b6ba5f7a511be99",
     "/manifest.webapp": "8fbd4d70adaa264008e58600fd41ac9f10a2e27d",
     "/orange_shine.0c2de4d61ff02394.png": "a14c165e700790ecd7a2d46691fbe0e86584a148",
     "/polyfills.5e6b3ada1c6f4661.js": "16421e98547907546eab606fb4e4b18b86fef6fa",
-    "/runtime.3273b43c2e9c8a6c.js": "0eac690bd4fc0174c92571b537e0c98d033bec0d",
+    "/runtime.1aeb71d6826436e9.js": "14bff52e30b821d2dd95b9dcc6bf89fe93a1b8e7",
     "/scripts.dbc35eb495569867.js": "2757f7f6797efbd00b6a2cd6e53cd360f9bd4218",
     "/styles.926017f11c9e39e8.css": "987634045c348d83c7d5ccf90e8d593ca59f983b"
   },
