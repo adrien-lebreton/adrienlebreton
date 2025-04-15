@@ -1,6 +1,6 @@
 {
   "configVersion": 1,
-  "timestamp": 1744664642702,
+  "timestamp": 1744675575748,
   "index": "/index.html",
   "assetGroups": [
     {
@@ -11,30 +11,7 @@
         "ignoreVary": true
       },
       "urls": [
-        "/576.440ee2837477e222.js",
-        "/favicon.ico",
-        "/index.html",
-        "/main.a6f54f7ee8b80a6e.js",
-        "/manifest.webapp",
-        "/polyfills.5e6b3ada1c6f4661.js",
-        "/runtime.4b7c234ed46a1004.js",
-        "/scripts.32cbe38c1f1fefc1.js",
-        "/styles.d018199821970dc1.css"
-      ],
-      "patterns": []
-    },
-    {
-      "name": "assets",
-      "installMode": "lazy",
-      "updateMode": "prefetch",
-      "cacheQueryOptions": {
-        "ignoreVary": true
-      },
-      "urls": [
-        "/adrien.63db796a46942298.png",
-        "/content/css/loading.css",
-        "/content/css/style.css",
-        "/content/css/style.css.map",
+        "/576.37bb0d1357fa5f5f.js",
         "/content/images/3dcard/fond.png",
         "/content/images/3dcard/green_shine.png",
         "/content/images/3dcard/orange_shine.png",
@@ -56,21 +33,31 @@
         "/content/scss/_variables.scss",
         "/content/scss/global.scss",
         "/content/scss/vendor.scss",
-        "/fond.f73624c3a206d1f4.png",
-        "/green_shine.1b2f4c96db67b6c4.png",
-        "/logo-alb_white.1f3b3fca84102e90.png",
-        "/orange_shine.0c2de4d61ff02394.png"
+        "/favicon.ico",
+        "/index.html",
+        "/main.a6f54f7ee8b80a6e.js",
+        "/manifest.webapp",
+        "/polyfills.5e6b3ada1c6f4661.js",
+        "/runtime.527d56cfebe15207.js",
+        "/scripts.32cbe38c1f1fefc1.js",
+        "/styles.926017f11c9e39e8.css"
       ],
+      "patterns": []
+    },
+    {
+      "name": "assets",
+      "installMode": "lazy",
+      "updateMode": "prefetch",
+      "cacheQueryOptions": {
+        "ignoreVary": true
+      },
+      "urls": [],
       "patterns": []
     }
   ],
   "dataGroups": [],
   "hashTable": {
-    "/576.440ee2837477e222.js": "d8d10db3671a3a1d2eb00bc4f721606241d76505",
-    "/adrien.63db796a46942298.png": "6f005171054e53396a26cb3144e558c94067ee74",
-    "/content/css/loading.css": "feb0e8594f405fd63a2360bd8472c93d5fa6245d",
-    "/content/css/style.css": "c7325b4d4ec3499915380b5d8c64f61eff4b3e9d",
-    "/content/css/style.css.map": "2ff3c155b47b90be39c6211466c078aad441ce32",
+    "/576.37bb0d1357fa5f5f.js": "89d2478154d9f4a7db9b8186fe4a257492619b23",
     "/content/images/3dcard/fond.png": "3c254675e28f1f5382fbbaa7167422329d725de5",
     "/content/images/3dcard/green_shine.png": "d4400256c8605143c913c1b5cad3449250c70cfa",
     "/content/images/3dcard/orange_shine.png": "a14c165e700790ecd7a2d46691fbe0e86584a148",
@@ -90,20 +77,16 @@
     "/content/images/services/dev.jpg": "279fe86b12ff6244ef053a016b3c180135749d5a",
     "/content/js/fluid-animate.js": "338e8bd677ef7cf6b532fbe497c9362fedc11071",
     "/content/scss/_variables.scss": "1044bf3afda59bd779e6591f49c1e9a3980ea214",
-    "/content/scss/global.scss": "d59597181408354639c7b43a91a486de7ec9d549",
+    "/content/scss/global.scss": "6f0a8df06f56733bbd17ba956277e22fa6f10984",
     "/content/scss/vendor.scss": "94314c7ab8a9ecb3af1cb8f2ef71e78e53f8c3ce",
     "/favicon.ico": "b6d04838303bd137171a49b3220637b79f535b15",
-    "/fond.f73624c3a206d1f4.png": "3c254675e28f1f5382fbbaa7167422329d725de5",
-    "/green_shine.1b2f4c96db67b6c4.png": "d4400256c8605143c913c1b5cad3449250c70cfa",
-    "/index.html": "efa0af85dde04d9021f974315560e5157948f2fd",
-    "/logo-alb_white.1f3b3fca84102e90.png": "b4083faad1f4025cc57d85959ab9d4b603f54d6a",
+    "/index.html": "f3d097a33b96cd32dee61014aff5c817af8bc4bf",
     "/main.a6f54f7ee8b80a6e.js": "6ea9aec209122bdeddff6fbe0d57efc057fd7f68",
     "/manifest.webapp": "4f29577ca27a47c2fce004b33096305390761ed0",
-    "/orange_shine.0c2de4d61ff02394.png": "a14c165e700790ecd7a2d46691fbe0e86584a148",
     "/polyfills.5e6b3ada1c6f4661.js": "16421e98547907546eab606fb4e4b18b86fef6fa",
-    "/runtime.4b7c234ed46a1004.js": "02a191eaa531db3b8d5507622e751d7471c69788",
+    "/runtime.527d56cfebe15207.js": "e440743bd53ec852fd17ce62197661031adc10d3",
     "/scripts.32cbe38c1f1fefc1.js": "385e7b66a9f3a9fe4b3163bce2856c303830da26",
-    "/styles.d018199821970dc1.css": "f1bd133f8648971c65a5755bfb6c2dc505400eb8"
+    "/styles.926017f11c9e39e8.css": "987634045c348d83c7d5ccf90e8d593ca59f983b"
   },
   "navigationUrls": [
     {

@@ -3,10 +3,6 @@
 @import 'bootstrap/scss/variables';
 @import 'src/main/webapp/content/scss/variables';
 
-/* ==============================================================
-Bootstrap tweaks
-===============================================================*/
-
 body {
   margin: 0;
   position: absolute;
@@ -26,7 +22,6 @@ h4 {
 }
 
 a:hover {
-  /* make sure browsers use the pointer cursor for anchors, even with no href */
   cursor: pointer;
 }
 
@@ -34,21 +29,12 @@ a:hover {
   color: $dropdown-link-hover-color;
 }
 
-/* ==========================================================================
-Browser Upgrade Prompt
-========================================================================== */
 .browserupgrade {
   margin: 0.2em 0;
   background: #ccc;
   color: #000;
   padding: 0.2em 0;
 }
-
-/* ==========================================================================
-Generic styles
-========================================================================== */
-
-/* other generic styles */
 
 .jh-card {
   padding: 1.5%;
@@ -87,18 +73,11 @@ Generic styles
   opacity: 1;
 }
 
-//.footer {
-//  border-top: 1px solid rgba(0, 0, 0, 0.125);
-//}
-
 .hand,
 [jhisortby] {
   cursor: pointer;
 }
 
-/* ==========================================================================
-Custom alerts for notification
-========================================================================== */
 .alerts {
   .alert {
     text-overflow: ellipsis;
@@ -138,9 +117,6 @@ Custom alerts for notification
   }
 }
 
-/* ==========================================================================
-entity detail page css
-========================================================================== */
 .row-md.jh-entity-details {
   display: grid;
   grid-template-columns: auto 1fr;
@@ -167,9 +143,6 @@ entity detail page css
   }
 }
 
-/* ==========================================================================
-ui bootstrap tweaks
-========================================================================== */
 .nav,
 .pagination,
 .carousel,
@@ -184,11 +157,6 @@ ui bootstrap tweaks
   white-space: nowrap;
 }
 
-/* ==========================================================================
-angular-cli removes postcss-rtl processed inline css, processed rules must be added here instead
-========================================================================== */
-
-/* navbar.component.scss */
 .navbar {
   ul.navbar-nav {
     .nav-item {
@@ -280,4 +248,75 @@ a.btn-default.btn-large, button.btn-default.btn-large, div.btn-default.btn-large
 
 a.btn-default.round, button.btn-default.round, div.btn-default.round {
   border-radius: 100px
+}
+
+@mixin transform($property) {
+  -webkit-transform: $property;
+  transform: $property;
+}
+
+@mixin animation($value) {
+  -webkit-animation: $value;
+  animation: $value;
+}
+
+@keyframes logo-pulse {
+  0% {
+    @include transform(scale(1));
+    opacity: 1;
+  }
+  50% {
+    @include transform(scale(1.08));
+    opacity: 0.85;
+  }
+  100% {
+    @include transform(scale(1));
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes logo-pulse {
+  0% {
+    -webkit-transform: scale(1);
+    opacity: 1;
+  }
+  50% {
+    -webkit-transform: scale(1.08);
+    opacity: 0.85;
+  }
+  100% {
+    -webkit-transform: scale(1);
+    opacity: 1;
+  }
+}
+
+.app-loading {
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  top: 10em;
+
+  p {
+    display: block;
+    font-size: 1.17em;
+    margin-top: 20px;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    font-weight: normal;
+    color: #555;
+  }
+
+  .loading-logo {
+    width: 80px;
+    height: 80px;
+    background-image: url('../images/logo/logo-alb_white.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+
+    @include animation(logo-pulse 1.5s ease-in-out infinite);
+  }
 }
